@@ -1,7 +1,19 @@
 @import "node_modules/reset-css/sass/reset";
 @import "src/scss/settings/fonts";
 @import "src/scss/settings/colors";
+@import "src/components/HomeHeader/homeheader";
+@import "src/components/HomeThreeColumns/homethreecolumns";
+@import "src/components/Home/home";
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: $font-base;
+  font-size: 14px;
+  color: $color-dark-grey;
+}
+a {
+  text-decoration: none;
+  color:inherit;
 }

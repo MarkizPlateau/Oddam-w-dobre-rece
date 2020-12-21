@@ -1,0 +1,90 @@
+header {
+  height: 960px;
+  position: relative;
+  &::before {
+    background: #FFFFFF url("../../assets/Home-Hero-Image.jpg") no-repeat left/contain;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-25%);
+    z-index: -1;
+  }
+}
+
+.header-container {
+  padding-top: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .header-navigation {
+    height: 95px;
+
+    .header-top-navigation {
+      display: flex;
+      justify-content: flex-end;
+      height: 36px;
+
+      li a {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        padding: 9px 10px;
+        color: $color-light-grey;
+
+        &:hover {
+          border: 0.75px solid $color-yellow;
+        }
+      }
+    }
+
+    .header-bottom-navigation {
+      display: flex;
+      justify-content: flex-end;
+      height: calc(100% - 36px);
+
+
+      li a {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        padding: 9px 20px;
+
+        &:hover {
+          border: 0.75px solid $color-dark-grey;
+        }
+      }
+    }
+  }
+
+  .header-section {
+    height: calc(100% - 95px);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .header-section-title {
+      font-size: 2.7rem;
+      margin-bottom: 25px;
+    }
+    .header-section-decoration {
+      margin: 40px 0;
+    }
+    .header-section-buttons {
+      padding-bottom: 200px;
+      display: flex;
+      & a {
+        margin: 20px;
+        width: 280px;
+        font-size: 2.6rem;
+        font-weight: 300;
+        text-align: center;
+        border: 0.75px solid $color-dark-grey;
+        padding: 12px 40px;
+      }
+    }
+  }
+}
