@@ -1,0 +1,32 @@
+.section-three-columns {
+  background-image: url("../../assets/3 Columns Background.png");
+  height: 300px;
+
+  .container-three-columns {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+      width: 20%;
+      .stats-value {
+        font-size: 6.4rem;
+        font-weight: 300;
+      }
+      .stats-target {
+        font-size: 1.3rem;
+        letter-spacing: -0.36px;
+      }
+      .stats-description {
+        font-size: 1.1rem;
+        letter-spacing: -0.32px;
+        font-weight: 300;
+      }
+    }
+  }
+}
