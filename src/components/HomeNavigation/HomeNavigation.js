@@ -32,10 +32,10 @@ const HomeNavigation = () => {
                     <li>
                         <LinkScroll
                             activeClass="active"
-                            to="section1"
+                            to="o-co-chodzi"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             O co chodzi?
@@ -44,10 +44,10 @@ const HomeNavigation = () => {
                     <li>
                         <LinkScroll
                             activeClass="active"
-                            to="section1"
+                            to="o-nas"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             O nas
