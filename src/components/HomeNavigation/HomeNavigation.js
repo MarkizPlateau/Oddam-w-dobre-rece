@@ -56,10 +56,10 @@ const HomeNavigation = () => {
                     <li>
                         <LinkScroll
                             activeClass="active"
-                            to="section1"
+                            to="main"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Fundacja i organizacje
@@ -68,10 +68,10 @@ const HomeNavigation = () => {
                     <li>
                         <LinkScroll
                             activeClass="active"
-                            to="section1"
+                            to="contact"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Kontakt
