@@ -1,0 +1,48 @@
+.container-main {
+  height: 700px;
+  max-width: 550px;
+  text-align: center;
+  & h2 {
+    font-size: 2.7rem;
+    letter-spacing: -0.76px;
+  }
+  button {
+    font-size: 1.7rem;
+    background-color: white;
+    border: 0.75px solid $color-dark-grey;
+    margin: 0 20px;
+    padding: 23px 42px;
+    cursor: pointer;
+  }
+  .button-page {
+    border: 1px solid $color-dark-grey;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    padding: 13px 15px;
+  }
+  .main-article {
+    height: 550px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .main-article-description {
+      font-size: 1.6rem;
+      width: 60%;
+    }
+    .article-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      div:first-child {
+        text-align: left;
+      }
+    }
+    .article-row:nth-of-type(1), .article-row:nth-of-type(2){
+      border-bottom: 0.75px solid $color-dark-grey;
+    }
+  }
+}
+.pagination-hidden {
+  visibility: hidden;
+}

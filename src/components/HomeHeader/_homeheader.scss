@@ -52,6 +52,7 @@ header {
 
         &:hover {
           border: 0.75px solid $color-dark-grey;
+          cursor: pointer;
         }
       }
     }
@@ -69,6 +70,7 @@ header {
     .header-section-title {
       font-size: 2.7rem;
       margin-bottom: 25px;
+      letter-spacing: -0.76px;
     }
     .header-section-decoration {
       margin: 40px 0;

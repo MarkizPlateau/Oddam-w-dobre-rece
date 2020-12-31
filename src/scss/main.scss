@@ -3,6 +3,11 @@
 @import "src/scss/settings/colors";
 @import "src/components/HomeHeader/homeheader";
 @import "src/components/HomeThreeColumns/homethreecolumns";
+@import "../components/HomeInformation/homeinformation";
+@import "../components/HomeAboutUs/homeaboutus";
+@import "../components/HomeMain/homemain";
+@import "../components/HomeForm/homeform";
+@import "../components/HomeFooter/homefooter";
 @import "src/components/Home/home";
 
 * {
