@@ -38,6 +38,7 @@
       .form-name-email {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         label {
           width: 45%;
           font-size: 1.1rem;
@@ -57,11 +58,12 @@
         textarea {
           width: 528px;
           height: 140px;
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           color: $color-dark-grey;
           border: none;
           border-bottom: 2px solid $color-light-grey;
           background-color: transparent;
+          text-align: justify;
         }
       }
       .submit-button {
