@@ -1,0 +1,37 @@
+@mixin title-decoration {
+  font: normal normal normal 2.8rem/3.9rem $font-base;
+  text-align: center;
+  letter-spacing: -0.8px;
+  div {
+    background-image: url("../../assets/Decoration.svg");
+    width: 253px;
+    height: 33px;
+  }
+}
+@mixin sign-form {
+  label {
+    background-color: $color-background-grey;
+    padding: 20px 67px 0 67px;
+    input {
+      background-color: $color-background-grey;
+      border: none;
+      border-bottom: 1px solid $color-dark-grey;
+    }
+  }
+  label:first-of-type {
+    padding-top: 40px;
+  }
+  label:last-of-type {
+    padding-bottom: 40px;
+  }
+}
+
+@mixin link-button {
+  font: normal normal 300 1.3rem/2.3rem $font-base;
+  a {
+    padding: 13px 12px;
+    &:hover {
+      border: 0.75px solid $color-dark-grey;
+    }
+  }
+}
