@@ -50,7 +50,7 @@ const ContactForm = () => {
             <label className={"form-label-message"}>
                 Wpisz swoją wiadomość
                 <br/>
-                <textarea  rows={8} cols={30} wrap={"soft"} name={"message"} value={form.message} placeholder={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."} onChange={handleChange}/>
+                <textarea  rows={4} cols={30} wrap={"hard"} name={"message"} value={form.message} placeholder={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."} onChange={handleChange}/>
             </label>
             <input className={"submit-button"} type="submit" value="Wyślij" />
         </form>
