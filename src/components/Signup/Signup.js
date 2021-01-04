@@ -2,12 +2,13 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../constans/routes";
 
-const Signin = () => {
+const Signup = () => {
 
     const [form, setForm] = useState(
         {
             email: "",
-            password: "",
+            passwordOne: "",
+            passwordTwo: "",
         }
     )
 
@@ -23,8 +24,8 @@ const Signin = () => {
 
     return (
         <>
-            <section className={"section-signin"}>
-                <h2 className={"title-decoration"}> Zaloguj się <div></div></h2>
+            <section className={"section-signup"}>
+                <h2 className={"title-decoration"}> Załóż konto <div></div></h2>
                 <form>
                     <label>
                         Email
@@ -34,11 +35,16 @@ const Signin = () => {
                     <label>
                         Hasło
                         <br/>
-                        <input type={"password"} name={"password"} value={form.password} onChange={handleChange}/>
+                        <input type={"password"} name={"passwordOne"} value={form.password} onChange={handleChange}/>
+                    </label>
+                    <label>
+                        Powtórz hasło
+                        <br/>
+                        <input type={"password"} name={"passwordTwo"} value={form.password} onChange={handleChange}/>
                     </label>
                     <div>
-                        <Link to={ROUTES.HOME}> Zaloguj się </Link>
-                        <Link to={ROUTES.SIGNUP}> Załóż konto </Link>
+                        <Link to={ROUTES.SIGNIN}> Zaloguj się </Link>
+                        <Link to={ROUTES.HOME}> Załóż konto </Link>
                     </div>
                 </form>
             </section>
@@ -46,4 +52,4 @@ const Signin = () => {
     )
 }
 
-export default Signin;
+export default Signup;

@@ -7,6 +7,7 @@ import {
 import * as ROUTES from "./constans/routes";
 import Home from "./components/Home/Home";
 import Signin from "./components/Signin/Signin"
+import Signup from "./components/Signup/Signup";
 import NotFound from "./components/NotFound/NotFound";
 import React from "react";
 import HomeNavigation from "./components/HomeNavigation/HomeNavigation";
@@ -21,6 +22,7 @@ const App = () => (
       <Switch>
             <Route exact path={ROUTES.HOME} component={Home} />
             <Route exact path={ROUTES.SIGNIN} component={Signin}/>
+            <Route exact path={ROUTES.SIGNUP} component={Signup}/>
             <Route component={NotFound} />
       </Switch>
     </Router>
