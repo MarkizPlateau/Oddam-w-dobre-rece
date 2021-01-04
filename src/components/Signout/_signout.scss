@@ -1,0 +1,17 @@
+@import "src/scss/settings/mixins";
+
+.section-signout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .title-decoration {
+    @include title-decoration;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    @include link-button;
+  }
+}

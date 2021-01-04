@@ -28,10 +28,9 @@
 
 @mixin link-button {
   font: normal normal 300 1.3rem/2.3rem $font-base;
-  a {
-    padding: 13px 12px;
-    &:hover {
+  padding: 13px 12px;
+
+  &:hover {
       border: 0.75px solid $color-dark-grey;
     }
-  }
 }
