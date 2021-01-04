@@ -12,10 +12,9 @@ const Home = () => {
         <>
             <header>
                 <div className={"container header-container"}>
-                    <HomeHeader />
+                    <HomeHeader/>
                 </div>
             </header>
-
             <section className={"section-three-columns"}>
                 <div className={"container container-three-columns"}>
                     <HomeThreeColumns />

@@ -1,0 +1,26 @@
+@import "src/scss/settings/mixins";
+
+.section-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .title-decoration {
+    @include title-decoration;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+    @include sign-form;
+    div {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      @include link-button;
+    }
+  }
+}
