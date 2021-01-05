@@ -1,11 +1,9 @@
 import React, {useState} from "react";
-import {ReactComponent as Decoration5} from "../../assets/Decoration.svg";
 
 const HomeForm = () => {
     return (
         <article className={"contact"}>
-            <h2> Komu pomagamy </h2>
-            <Decoration5 />
+            <h2 className={"title-decoration"}> Komu pomagamy <div></div></h2>
             <ContactForm />
         </article>
     )

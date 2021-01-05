@@ -8,7 +8,7 @@ const Signout = () => {
         <>
             <section className={"section-signout"}>
                 <h2 className={"title-decoration"}> Wylogowanie nastąpiło pomyślnie <div></div></h2>
-                <Link to={ROUTES.HOME}> Strona główna </Link>
+                <button><Link to={ROUTES.HOME}> Strona główna </Link></button>
             </section>
         </>
     )

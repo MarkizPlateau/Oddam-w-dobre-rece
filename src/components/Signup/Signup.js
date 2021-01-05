@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../constans/routes";
+import {HOME} from "../../constans/routes";
 
-const Signup = () => {
+const Signup = (props) => {
 
     const [form, setForm] = useState(
         {
@@ -11,6 +12,11 @@ const Signup = () => {
             passwordTwo: "",
         }
     )
+
+    const [errors, setErrors] = useState({})
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -22,29 +28,70 @@ const Signup = () => {
         });
     };
 
+    const validation = e => {
+
+        let errors = {};
+
+        if (!form.email) {
+            errors.email = "Email required"
+        } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+            errors.email = "Email address is invalid"
+        }
+
+        if (!form.passwordOne) {
+            errors.passwordOne = "Password is required"
+        } else if (form.passwordOne.length < 6) {
+            errors.passwordOne = "Password need to be 6 characters or more"
+        }
+
+        if (!form.passwordTwo) {
+            errors.passwordTwo = "Confirm your password";
+        } else if (form.passwordTwo !== form.passwordOne) {
+            errors.passwordTwo = "Password do not match";
+        }
+
+        return errors;
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        setErrors(validation);
+        setIsSubmitting(true);
+    }
+
+    useEffect(() =>{
+        if (Object.keys(errors).length === 0 && isSubmitting) {
+            props.history.push(ROUTES.HOME);
+        }
+    }, [errors])
+
     return (
         <>
             <section className={"section-signup"}>
                 <h2 className={"title-decoration"}> Załóż konto <div></div></h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>
                         Email
                         <br/>
-                        <input type={"text"} name={"email"} value={form.email} onChange={handleChange}/>
+                        <input type={"text"} name={"email"} className={errors.email && "invalid"} value={form.email} onChange={handleChange}/>
+                    {errors.email && <p>{errors.email}</p>}
                     </label>
                     <label>
                         Hasło
                         <br/>
-                        <input type={"password"} name={"passwordOne"} value={form.password} onChange={handleChange}/>
+                        <input type={"password"} name={"passwordOne"} className={errors.email && "invalid"} value={form.password} onChange={handleChange}/>
+                    {errors.passwordOne && <p>{errors.passwordOne}</p>}
                     </label>
                     <label>
                         Powtórz hasło
                         <br/>
-                        <input type={"password"} name={"passwordTwo"} value={form.password} onChange={handleChange}/>
+                        <input type={"password"} name={"passwordTwo"} className={errors.email && "invalid"} value={form.password} onChange={handleChange}/>
+                    {errors.passwordTwo && <p>{errors.passwordTwo}</p>}
                     </label>
                     <div>
                         <Link to={ROUTES.SIGNIN}> Zaloguj się </Link>
-                        <Link to={ROUTES.HOME}> Załóż konto </Link>
+                        <button type={"submit"}> Załóż konto </button>
                     </div>
                 </form>
             </section>

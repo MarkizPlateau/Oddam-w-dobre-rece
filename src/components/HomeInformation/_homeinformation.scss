@@ -53,13 +53,14 @@
           position: relative;
           font-size: 1.3rem;
           padding-bottom: 1rem;
+          width: 100%;
 
           &::after {
             content: "";
             position: absolute;
-            left: 25%;
+            left: 30%;
             bottom: 0;
-            width: 50%;
+            width: 40%;
             border-bottom: 1px solid $color-light-grey;
           }
         }
