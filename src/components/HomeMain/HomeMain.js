@@ -66,7 +66,7 @@ const ArticleFoundation = () => {
         <>
             <p className={"main-article-description"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
             {elementsToShow.map(fund => (
-                <div className={"article-row"}>
+                <div key={fund.id} className={"article-row"}>
                     <div>Fundacja {fund.name} <br/> Cel i misja {fund.description}</div>
                     <div>{fund.stuff}</div>
                 </div>
@@ -109,25 +109,25 @@ const Pagination = ({qtyPerPage, items, actionToUpdateList}) =>{
 }
 
 
-const ArticleFoundation1 = () => {
-    return (
-        <>
-            <p className={"main-article-description"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
-            <div className={"article-row"}>
-                <div>Fundacja “Dbam o Zdrowie” <br/> Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>
-                <div>ubrania, jedzenie, sprzęt AGD, meble, zabawki</div>
-            </div>
-            <div className={"article-row"}>
-                <div>Fundacja “Dla dzieci” <br/> Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
-                <div>ubrania, meble, zabawki</div>
-            </div>
-            <div className={"article-row"}>
-                <div>Fundacja “Bez domu” <br/> Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</div>
-                <div>ubrania, jedzenie, ciepłe koce</div>
-            </div>
-        </>
-    )
-}
+// const ArticleFoundation1 = () => {
+//     return (
+//         <>
+//             <p className={"main-article-description"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+//             <div className={"article-row"}>
+//                 <div>Fundacja “Dbam o Zdrowie” <br/> Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>
+//                 <div>ubrania, jedzenie, sprzęt AGD, meble, zabawki</div>
+//             </div>
+//             <div className={"article-row"}>
+//                 <div>Fundacja “Dla dzieci” <br/> Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
+//                 <div>ubrania, meble, zabawki</div>
+//             </div>
+//             <div className={"article-row"}>
+//                 <div>Fundacja “Bez domu” <br/> Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</div>
+//                 <div>ubrania, jedzenie, ciepłe koce</div>
+//             </div>
+//         </>
+//     )
+// }
 
 
 const ArticleOrganization = () => {

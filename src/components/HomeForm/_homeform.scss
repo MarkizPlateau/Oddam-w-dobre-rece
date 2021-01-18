@@ -33,9 +33,15 @@
     .contact-form {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       height: 40%;
       width: 50%;
+      .form-success {
+        color: green;
+        align-self: center;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
       .form-name-email {
         display: flex;
         justify-content: space-between;
@@ -43,6 +49,9 @@
         label {
           width: 45%;
           font-size: 1.1rem;
+          .invalid {
+            border-bottom: 1px solid red;
+          }
           input {
             margin-top: 12px;
             font-size: 1.2rem;
@@ -56,6 +65,10 @@
       .form-label-message {
         margin-top: 20px;
         font-size: 1.1rem;
+        .invalid {
+          border-bottom: 1px solid red;
+          background-color: transparent;
+        }
         textarea {
           width: 528px;
           height: 140px;
@@ -66,6 +79,10 @@
           background-color: transparent;
           text-align: justify;
         }
+      }
+      p {
+        color: red;
+        background-color: transparent;
       }
       .submit-button {
         font-size: 1.2rem;
