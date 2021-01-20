@@ -82,7 +82,12 @@ const ContactForm = (props) => {
                 headers: {
                     "Content-Type": "application/json"
                 }
-            }).then (() => {
+            }).then(response => {
+              if (!response.ok) throw Error (response.statusText);
+              return response.json();
+            })
+                .then(data => console.log(data))
+                .then (() => {
                 setForm(() => {
                     return {
                         name: "",
@@ -90,7 +95,7 @@ const ContactForm = (props) => {
                         message: "",
                     }
                 })
-            })
+            }).catch(error => console.log(error));
         } else if (Object.keys(errors).length !== 0) {
             setSuccess(false);
         }

@@ -11,8 +11,8 @@ const HomeMain = () => {
     const toOrganization = () => {
         setArticle(prevState => "toOrganization")
     }
-    const toLokal = () => {
-        setArticle(prevState => "toLokal")
+    const toLocal = () => {
+        setArticle(prevState => "toLocal")
     }
 
     return (
@@ -23,12 +23,12 @@ const HomeMain = () => {
             <div className={"main-buttons"}>
                 <button className={"button-foundation"} onClick={toFoundation}> Fundacjom </button>
                 <button className={"button-organization"} onClick={toOrganization}> Organizacjom pozarządowym </button>
-                <button className={"button-lokal"} onClick={toLokal}> Lokalnym zbiórkom </button>
+                <button className={"button-local"} onClick={toLocal}> Lokalnym zbiórkom </button>
             </div>
             <article className={"main-article"}>
                 {article === "toFoundation" && <ArticleFoundation /> }
                 {article === "toOrganization" && <ArticleOrganization /> }
-                {article === "toLokal" && <ArticleLokal /> }
+                {article === "toLocal" && <ArticleLocal /> }
             </article>
 
         </>
@@ -47,20 +47,9 @@ const ArticleFoundation = () => {
         {id:7, name: "Foundation", description: "Description", stuff: "items"},
     ]
 
-    // const [page, setPage] = useState(1);
+
     const [elementsToShow, setElementsToShow] = useState(list.slice(0,3));
 
-    // const pageChange1 = () => {
-    //     setPage(prevState => 1)
-    // }
-    //
-    // const pageChange2 = () => {
-    //     setPage(prevState => 2)
-    // }
-    //
-    // const pageChange3 = () => {
-    //     setPage(prevState => 3)
-    // }
 
     return (
         <>
@@ -72,14 +61,6 @@ const ArticleFoundation = () => {
                 </div>
             ))}
             <Pagination qtyPerPage={3} items={list} actionToUpdateList={setElementsToShow}/>
-            {/*{page === 1 && <ArticleFoundation1 />}*/}
-            {/*{page === 2 && <ArticleFoundation2 />}*/}
-            {/*{page === 3 && <ArticleFoundation3 />}*/}
-            {/*<div>*/}
-            {/*    <button className={"button-page"} onClick={pageChange1}> 1 </button>*/}
-            {/*    <button className={"button-page"} onClick={pageChange2}> 2 </button>*/}
-            {/*    <button className={"button-page"} onClick={pageChange3}> 3 </button>*/}
-            {/*</div>*/}
         </>
     )
 }
@@ -109,27 +90,6 @@ const Pagination = ({qtyPerPage, items, actionToUpdateList}) =>{
 }
 
 
-// const ArticleFoundation1 = () => {
-//     return (
-//         <>
-//             <p className={"main-article-description"}>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
-//             <div className={"article-row"}>
-//                 <div>Fundacja “Dbam o Zdrowie” <br/> Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>
-//                 <div>ubrania, jedzenie, sprzęt AGD, meble, zabawki</div>
-//             </div>
-//             <div className={"article-row"}>
-//                 <div>Fundacja “Dla dzieci” <br/> Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
-//                 <div>ubrania, meble, zabawki</div>
-//             </div>
-//             <div className={"article-row"}>
-//                 <div>Fundacja “Bez domu” <br/> Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</div>
-//                 <div>ubrania, jedzenie, ciepłe koce</div>
-//             </div>
-//         </>
-//     )
-// }
-
-
 const ArticleOrganization = () => {
     const list = [
         {id:1, name: "Lorem Ipsum 1", description: "Quis varius quam quisque id diam vel quam elementum pulvinar.", stuff: "Egestas, sed, tempus"},
@@ -156,7 +116,7 @@ const ArticleOrganization = () => {
     )
 }
 
-const ArticleLokal = () => {
+const ArticleLocal = () => {
     const list = [
         {id:1, name: "Lorem Ipsum 1", description: "Quis varius quam quisque id diam vel quam elementum pulvinar.", stuff: "Egestas, sed, tempus"},
         {id:2, name: "Lorem Ipsum 2", description: "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.", stuff: "Ut, aliquam, purus, sit, amet"},
