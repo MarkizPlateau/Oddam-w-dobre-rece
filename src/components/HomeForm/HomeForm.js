@@ -109,13 +109,15 @@ const ContactForm = (props) => {
                     Wpisz swoje imię
                     <br/>
                     <input type={"text"} name={"name"} value={form.name} className={errors.name && "invalid"} placeholder={"Krzysztof"} onChange={handleChange}/>
-                    {errors.name && <p>{errors.name}</p>}
+                    <p className={`hidden ${errors.name && "display-none"}`}> Error </p>
+                    {errors.name && <p className={"form-error"}> {errors.name} </p>}
                 </label>
                 <label>
                     Wpisz swój email
                     <br/>
                     <input type={"text"} name={"email"} value={form.email} className={errors.email && "invalid"} placeholder={"abc@xyz.pl"} onChange={handleChange}/>
-                    {errors.email && <p>{errors.email}</p>}
+                    <p className={`hidden ${errors.email && "display-none"}`}> Error </p>
+                    {errors.email && <p className={"form-error"}> {errors.email} </p>}
                 </label>
             </div>
             <label className={"form-label-message"}>

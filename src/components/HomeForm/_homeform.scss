@@ -60,6 +60,12 @@
             border-bottom: 2px solid $color-light-grey;
             background-color: transparent;
           }
+          .hidden {
+            height: 34px;
+          }
+          .form-error {
+            height: 34px;
+          }
         }
       }
       .form-label-message {
@@ -85,6 +91,7 @@
         background-color: transparent;
       }
       .submit-button {
+        margin-top: 15px;
         font-size: 1.2rem;
         font-weight: 300;
         letter-spacing: 0;
